@@ -22,6 +22,11 @@ The ICS-43434 and MAX98357A modules must support the ESP32's 3.3 V logic
 levels. Pin labels may vary; check the markings and datasheets for the actual
 modules before wiring them.
 
+The KiCad design files are in [`voiceass-kicad/`](voiceass-kicad/):
+[`voiceass-kicad.kicad_sch`](voiceass-kicad/voiceass-kicad.kicad_sch) is the
+schematic and [`voiceass-kicad.kicad_pcb`](voiceass-kicad/voiceass-kicad.kicad_pcb)
+is the PCB layout.
+
 ### Wiring
 
 | Signal | ESP32-S3 DevKitC-1 | ICS-43434 | MAX98357A |
@@ -34,6 +39,8 @@ modules before wiring them.
 | Amplifier power | 5V | — | VIN |
 | Common ground | GND | GND | GND |
 | Microphone channel select | GND | L/R | — |
+| Amplifier enable/channel select | 3V3 | — | SD_MODE |
+| Amplifier gain setting | 5V | — | GAIN_SLOT |
 | Amplifier output | — | — | SPK+ and SPK− to speaker |
 
 BCLK, LRCLK, and GND are shared by both I²S modules. Connecting the
@@ -42,6 +49,12 @@ in the configuration. Power the microphone from 3.3 V and the amplifier from
 5 V; do not power the microphone from 5 V. Connect the speaker's two
 terminals only to SPK+ and SPK−: this is a bridge-tied output, so neither
 speaker terminal should be connected to GND or an ESP32 GPIO.
+
+Connect `SD_MODE` to 3V3 to enable the amplifier and select the left audio
+channel; pulling it low shuts the amplifier down. Connect `GAIN_SLOT` to 5V
+for 6 dB gain. In the current KiCad files, `GAIN_SLOT` is connected to +5V,
+but `SD_MODE` is left unconnected, so connect it to 3V3 when assembling the
+board.
 
 Use a common ground for the board, microphone, and amplifier. Check the
 development board pinout before applying power, and never connect the
