@@ -53,13 +53,12 @@ richiesta dall’amplificatore.
 
 1. Copiare `voice-assistant.yaml` nella cartella ESPHome di Home Assistant.
 2. Nel `secrets.yaml` usato da ESPHome, definire `wifi_ssid`, `wifi_password`,
-   `fallback_password`, `api_encryption_key` e `ota_password`. Scegliere
-   password robuste per il Wi-Fi, il punto di accesso di emergenza e l’OTA.
-   `api_encryption_key` deve essere una chiave API ESPHome codificata in Base64
-   da 32 byte; si può generare con `openssl rand -base64 32`. La chiave API
-   protegge la connessione nativa con Home Assistant; `ota_password` protegge
-   separatamente gli aggiornamenti OTA. Non condividere né versionare il file
-   dei segreti.
+   `fallback_password` e `api_encryption_key`. Scegliere password robuste per il
+   Wi‑Fi e il punto di accesso di emergenza. `api_encryption_key` deve essere
+   una chiave API ESPHome codificata in Base64 da 32 byte; si può generare con
+   `openssl rand -base64 32`. La chiave API protegge la connessione nativa con
+   Home Assistant e gli aggiornamenti OTA secondo il flusso consigliato da
+   ESPHome con crittografia. Non condividere né versionare il file dei segreti.
 3. Validare e compilare con `esphome config voice-assistant.yaml` e
    `esphome compile voice-assistant.yaml`, poi installare il firmware via USB.
 4. In Home Assistant, aggiungere il dispositivo ESPHome e configurare una
