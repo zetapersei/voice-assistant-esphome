@@ -52,9 +52,8 @@ speaker terminal should be connected to GND or an ESP32 GPIO.
 
 Connect `SD_MODE` to 3V3 to enable the amplifier and select the left audio
 channel; pulling it low shuts the amplifier down. Connect `GAIN_SLOT` to 5V
-for 6 dB gain. In the current KiCad files, `GAIN_SLOT` is connected to +5V,
-but `SD_MODE` is left unconnected, so connect it to 3V3 when assembling the
-board.
+for 6 dB gain. In the current KiCad files, `GAIN_SLOT` is connected to +5V.
+
 
 Use a common ground for the board, microphone, and amplifier. Check the
 development board pinout before applying power, and never connect the
