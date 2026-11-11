@@ -22,11 +22,12 @@ api:
 
 ota:
   - platform: esphome
-    encryption:
+    password: !secret ota_password
 
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
+  power_save_mode: none
   ap:
     ssid: "Assistente-Vocale Fallback"
     password: !secret fallback_password
