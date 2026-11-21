@@ -10,7 +10,7 @@ Assist per il riconoscimento del parlato, la conversazione e la sintesi vocale.
 
 - Scheda **ESP32-S3 DevKitC-1** con modulo **N8R8**: 8 MB di flash e 8 MB di
   PSRAM octal. La configurazione usa ESP-IDF e richiede PSRAM octal.
-- Modulo microfono I²S **ICS-43434**. È alimentato a 3,3 V e fornisce l’audio
+- Modulo microfono I²S **INMP441**. È alimentato a 3,3 V e fornisce l’audio
   digitale al pin dati dell’ESP32.
 - Modulo amplificatore I²S **MAX98357A**, alimentato a 5 V. Riceve l’audio
   digitale dall’ESP32 e pilota direttamente l’altoparlante.
@@ -18,13 +18,13 @@ Assist per il riconoscimento del parlato, la conversazione e la sintesi vocale.
 - Alimentatore USB stabile da **5 V, almeno 1 A**; cavi e, facoltativamente,
   basetta millefori o PCB.
 
-I moduli ICS-43434 e MAX98357A devono essere compatibili con i livelli logici
+I moduli INMP441 e MAX98357A devono essere compatibili con i livelli logici
 3,3 V dell’ESP32. Le sigle dei pin possono variare: verificare la serigrafia e
 il datasheet dei moduli effettivamente acquistati prima di collegarli.
 
 ### Collegamenti
 
-| Segnale | ESP32-S3 DevKitC-1 | ICS-43434 | MAX98357A |
+| Segnale | ESP32-S3 DevKitC-1 | INMP441 | MAX98357A |
 |---|---|---|---|
 | Clock bit (BCLK) | GPIO5 | SCK | BCLK |
 | Clock parola (LRCLK/WS) | GPIO6 | WS | LRC |

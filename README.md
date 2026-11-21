@@ -10,7 +10,7 @@ speech recognition, conversation, and speech synthesis.
 
 - **ESP32-S3 DevKitC-1** board with an **N8R8** module: 8 MB flash and 8 MB
   octal PSRAM. This configuration uses ESP-IDF and requires octal PSRAM.
-- **ICS-43434** I²S microphone module. It runs on 3.3 V and sends digital audio
+- **INMP441** I²S microphone module. It runs on 3.3 V and sends digital audio
   to the ESP32 data pin.
 - **MAX98357A** I²S amplifier module, powered from 5 V. It receives digital
   audio from the ESP32 and directly drives the speaker.
@@ -18,7 +18,7 @@ speech recognition, conversation, and speech synthesis.
 - Stable **5 V, at least 1 A** USB supply, hookup wires, and optionally a
   perfboard or PCB.
 
-The ICS-43434 and MAX98357A modules must support the ESP32's 3.3 V logic
+The INMP441 and MAX98357A modules must support the ESP32's 3.3 V logic
 levels. Pin labels may vary; check the markings and datasheets for the actual
 modules before wiring them.
 
@@ -29,7 +29,7 @@ is the PCB layout.
 
 ### Wiring
 
-| Signal | ESP32-S3 DevKitC-1 | ICS-43434 | MAX98357A |
+| Signal | ESP32-S3 DevKitC-1 | INMP441 | MAX98357A |
 |---|---|---|---|
 | Bit clock (BCLK) | GPIO5 | SCK | BCLK |
 | Word clock (LRCLK/WS) | GPIO6 | WS | LRC |

@@ -44,6 +44,7 @@ microphone:
     i2s_audio_id: i2s_bus
     i2s_din_pin: GPIO4
     adc_type: external
+    # INMP441: connect L/R to GND to select the left channel.
     channel: left
     sample_rate: 16000
     bits_per_sample: 32bit
