@@ -2829,7 +2829,7 @@
 				)
 			)
 		)
-		(property "Value" "ICS-43434"
+		(property "Value" "INMP-441"
 			(at 0 2.9 0)
 			(unlocked yes)
 			(layer "F.Fab")

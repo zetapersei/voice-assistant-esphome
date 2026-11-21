@@ -6228,7 +6228,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ICS-43434"
+		(property "Value" "INMP-441"
 			(at 201.93 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
